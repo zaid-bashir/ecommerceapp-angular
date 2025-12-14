@@ -1,11 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Header } from './layout/header/header'
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Header],
   template: `
-    <router-outlet />
+    <app-header></app-header>
+    <div class="h-[calc(100%-64px)] overflow-auto" >
+      <router-outlet />
+    </div>
   `,
   styles: [],
 })

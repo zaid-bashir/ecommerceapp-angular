@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { MatToolbar } from '@angular/material/toolbar';
+import { HeaderActions } from "../header-actions/header-actions";
+
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [MatToolbar, HeaderActions],
   template: `
-    <p>
-      header works!
-    </p>
+    <mat-toolbar class="w-full elevated py-2" >
+      <div class="max-w-[1200px] mx-auto w-full flex justify-between items-center" >
+        <span>Modern Store</span>
+        <app-header-actions></app-header-actions>
+      </div>
+    </mat-toolbar>
   `,
   styles: ``,
 })
